@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./Component/Header";
+import Navbar from "./Component/Navbar";
 import HeroSection from "./Component/HeroSection";
 // import Body from "./Body";
 // import Footer from "./Footer";
@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Navbar />
         <HeroSection />
         {/* <Body />
         <Footer /> */}
