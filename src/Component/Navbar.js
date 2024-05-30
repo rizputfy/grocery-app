@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
 import {
   NavbarContainer,
-  Logo,
-  NavMenu,
-  NavItem,
-  NavLink,
-  DropdownMenu,
-  DropdownColumn,
-  DropdownCategory,
-  DropdownItem,
-  NavIcons,
-  NavIcon,
-  SearchContainer,
-  SearchIcon,
-  SearchInput,
-  LoginButton,
-  SmallNavbarContainer,
-  SmallNavLink,
-  showSmallNavbar
+  Logo, NavMenu, NavItem, NavLink, DropdownMenu, DropdownColumn, DropdownCategory, DropdownItem, NavIcons, NavIcon,
+  SearchContainer, SearchIcon, SearchInput, LoginButton, SmallNavbarContainer, SmallNavLink, 
 
 } from './StyledNavbar';
 
@@ -44,7 +29,6 @@ const Navbar = () => {
     <NavbarContainer>
       <Logo href="#">GROCERY APP</Logo>
       <NavMenu>
-        <NavItem><NavLink href="#">PROMO</NavLink></NavItem>
         <NavItem
           onMouseEnter={() => handleMouseEnter('PRODUK_SEGAR')}
           onMouseLeave={handleMouseLeave}
