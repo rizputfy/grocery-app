@@ -7,14 +7,13 @@ export const SmallNavbarContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px 20px; /* Adjust padding as needed */
+  padding: 5px 20px; 
   position: fixed;
+  height: 30px;
   top: 0;
   z-index: 1000;
   transition: top 0.3s;
 `;
-
-export const showSmallNavbar = styled.div
 
 export const SmallNavLink = styled.a`
   color: white;
@@ -34,7 +33,7 @@ export const NavbarContainer = styled.div`
   border-bottom: 1px solid #ccc;
   background-color: white;
   position: fixed;
-  top: 30px; /* Adjust based on the height of SmallNavbarContainer */
+  top: 30px; 
   width: 100%;
   z-index: 999;
   transition: top 0.3s;
@@ -78,7 +77,7 @@ export const DropdownMenu = styled.div`
   z-index: 1;
   padding: 20px;
   border: 1px solid #ddd;
-  min-width: max-content; /* Set min-width to expand according to content */
+  min-width: max-content; 
 `;
 
 
@@ -152,7 +151,7 @@ export const NavIcon = styled.a`
   position: relative;
   text-decoration: none;
   &:hover {
-    color: #ff9bd2;
+    color: #9DDE8B;
   }
 `;
 
