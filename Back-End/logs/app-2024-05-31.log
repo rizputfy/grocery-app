@@ -1,0 +1,295 @@
+ [LOGGER] 2024-05-31 03:52:43.854 PM ERROR : uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+    at listenInCluster (node:net:1799:12)
+    at Server.listen (node:net:1887:7)
+    at Function.listen (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\application.js:635:24)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/index.js:6:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-31 03:53:32.044 PM ERROR : Error in create user function: [object Object]
+ [LOGGER] 2024-05-31 03:53:32.046 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:292:34)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+ [LOGGER] 2024-05-31 03:53:45.908 PM ERROR : Error in create user function: [object Object]
+ [LOGGER] 2024-05-31 03:53:45.909 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:292:34)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+ [LOGGER] 2024-05-31 03:54:01.225 PM ERROR : Error in create user function: [object Object]
+ [LOGGER] 2024-05-31 03:54:01.226 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:292:34)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+ [LOGGER] 2024-05-31 03:54:38.790 PM ERROR : Error in create user function: [object Object]
+ [LOGGER] 2024-05-31 03:54:38.791 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:292:34)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+ [LOGGER] 2024-05-31 03:54:45.146 PM ERROR : Error in create user function: [object Object]
+ [LOGGER] 2024-05-31 03:54:45.147 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:292:34)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+ [LOGGER] 2024-05-31 03:54:51.063 PM ERROR : Error in create user function: Email sudah terdaftar
+ [LOGGER] 2024-05-31 03:54:51.063 PM ERROR : Error: Email sudah terdaftar
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:299:30)
+ [LOGGER] 2024-05-31 03:55:17.485 PM ERROR : Error in create user function: Email already exsist
+ [LOGGER] 2024-05-31 03:55:17.488 PM ERROR : Error: Email already exsist
+    at createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:299:30)
+ [LOGGER] 2024-05-31 03:55:25.325 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  name: "sasasa",
+  ~~~~
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `name`. Did you mean `data`? Available options are marked with ?.
+ [LOGGER] 2024-05-31 03:55:25.328 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  name: "sasasa",
+  ~~~~
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `name`. Did you mean `data`? Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 03:58:01.849 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+ [LOGGER] 2024-05-31 03:58:01.853 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 03:58:23.219 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+ [LOGGER] 2024-05-31 03:58:23.223 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 03:58:23.976 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+ [LOGGER] 2024-05-31 03:58:23.980 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  role: "Admin",
+  ~~~~
+  name: "sasasa",
+  email: "abdultalif@gmail.com",
+  no_telp: "33387878787873",
+  password: "12345678",
+  image: "default.jpg",
+? data?: UserCreateInput | UserUncheckedCreateInput
+}
+
+Unknown argument `role`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 04:00:17.591 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    role: "Admin",
+    name: "sasasa",
+    email: "abdultalif@gmail.com",
+    no_telp: "33387878787873",
+    password: {},
+              ~~
+    image: "default.jpg"
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object.
+ [LOGGER] 2024-05-31 04:00:17.595 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    role: "Admin",
+    name: "sasasa",
+    email: "abdultalif@gmail.com",
+    no_telp: "33387878787873",
+    password: {},
+              ~~
+    image: "default.jpg"
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 04:00:41.011 PM ERROR : Error in create user function: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    role: "Admin",
+    name: "sasasa",
+    email: "abdultalif@gmail.com",
+    no_telp: "33387878787873",
+    password: {},
+              ~~
+    image: "default.jpg"
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object.
+ [LOGGER] 2024-05-31 04:00:41.016 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    role: "Admin",
+    name: "sasasa",
+    email: "abdultalif@gmail.com",
+    no_telp: "33387878787873",
+    password: {},
+              ~~
+    image: "default.jpg"
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:301:24)
+ [LOGGER] 2024-05-31 04:12:53.310 PM ERROR : Eror in delete user function: User not found
+ [LOGGER] 2024-05-31 04:12:53.312 PM ERROR : Error: User not found
+    at deleteUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:381:19)

@@ -1,0 +1,120 @@
+ [LOGGER] 2024-05-27 09:09:39.019 PM ERROR : uncaughtException: Joi.number(...).max(...).required(...).trim is not a function
+TypeError: Joi.number(...).max(...).required(...).trim is not a function
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/product-validation.js:6:43
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 09:18:49.893 PM ERROR : uncaughtException: ENOENT: no such file or directory, unlink 'uploads/menu/1716819529881.png'
+Error: ENOENT: no such file or directory, unlink 'uploads/menu/1716819529881.png'
+    at Object.unlinkSync (node:fs:1883:3)
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:31:16)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:526:35)
+    at finish (node:internal/streams/writable:748:10)
+ [LOGGER] 2024-05-27 09:19:35.972 PM ERROR : Error in create product function: [object Object]
+ [LOGGER] 2024-05-27 09:19:35.974 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:13:30)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:526:35)
+    at finish (node:internal/streams/writable:748:10)
+ [LOGGER] 2024-05-27 09:20:23.867 PM ERROR : Error in create product function: [object Object]
+ [LOGGER] 2024-05-27 09:20:23.868 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:13:30)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:49:68)
+    at Multipart.<anonymous> (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+ [LOGGER] 2024-05-27 09:20:39.629 PM ERROR : Error in create product function: [object Object]
+ [LOGGER] 2024-05-27 09:20:39.630 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:13:30)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\belajar\gamelab\Grocery Delivery APP\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:526:35)
+    at finish (node:internal/streams/writable:748:10)
+ [LOGGER] 2024-05-27 09:22:19.723 PM ERROR : Error in create product function: result.status is not a function
+ [LOGGER] 2024-05-27 09:22:19.725 PM ERROR : TypeError: result.status is not a function
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:21:16)
+ [LOGGER] 2024-05-27 09:22:39.425 PM ERROR : Error in create product function: Product already exist
+ [LOGGER] 2024-05-27 09:22:39.426 PM ERROR : Error: Product already exist
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:16:33)
+ [LOGGER] 2024-05-27 09:27:52.453 PM ERROR : Error in create product function: Product already exist
+ [LOGGER] 2024-05-27 09:27:52.456 PM ERROR : Error: Product already exist
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:16:33)
+ [LOGGER] 2024-05-27 09:53:10.906 PM ERROR : Error in update product function: [object Object]
+ [LOGGER] 2024-05-27 09:53:10.908 PM ERROR : Error: [object Object]
+    at validate (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/validation/validation.js:24:15)
+    at updateProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:47:37)
+ [LOGGER] 2024-05-27 11:09:34.030 PM ERROR : uncaughtException: Unexpected token } in JSON at position 35281
+SyntaxError: Unexpected token } in JSON at position 35281
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:09:49.027 PM ERROR : uncaughtException: Unexpected token } in JSON at position 35278
+SyntaxError: Unexpected token } in JSON at position 35278
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:16:14.081 PM ERROR : uncaughtException: Unexpected token } in JSON at position 38266
+SyntaxError: Unexpected token } in JSON at position 38266
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:16:15.116 PM ERROR : uncaughtException: Unexpected token } in JSON at position 38266
+SyntaxError: Unexpected token } in JSON at position 38266
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:16:39.394 PM ERROR : uncaughtException: Unexpected token } in JSON at position 38316
+SyntaxError: Unexpected token } in JSON at position 38316
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:20:54.347 PM ERROR : uncaughtException: Unexpected token , in JSON at position 46568
+SyntaxError: Unexpected token , in JSON at position 46568
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:21:00.339 PM ERROR : uncaughtException: Unexpected token , in JSON at position 46568
+SyntaxError: Unexpected token , in JSON at position 46568
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:39:58.042 PM ERROR : uncaughtException: Unexpected token } in JSON at position 50388
+SyntaxError: Unexpected token } in JSON at position 50388
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:40:02.266 PM ERROR : uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:40:12.025 PM ERROR : uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-05-27 11:46:16.849 PM ERROR : uncaughtException: Unexpected token } in JSON at position 73710
+SyntaxError: Unexpected token } in JSON at position 73710
+    at JSON.parse (<anonymous>)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/utils/web.js:11:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)

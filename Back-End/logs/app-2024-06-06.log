@@ -1,0 +1,47 @@
+ [LOGGER] 2024-06-06 10:14:05.115 PM ERROR : Error in login function: prisma is not defined
+ [LOGGER] 2024-06-06 10:14:05.117 PM ERROR : ReferenceError: prisma is not defined
+    at login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/auth-controller.js:120:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ [LOGGER] 2024-06-06 10:15:24.086 PM ERROR : Error in login function: 
+Invalid `prisma.user.findFirst()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+ [LOGGER] 2024-06-06 10:15:24.088 PM ERROR : PrismaClientInitializationError: 
+Invalid `prisma.user.findFirst()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:7177)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/auth-controller.js:121:28)
+ [LOGGER] 2024-06-06 10:18:47.545 PM ERROR : Error in setActivateUser function: User not found
+ [LOGGER] 2024-06-06 10:18:47.546 PM ERROR : Error: User not found
+    at setActivateUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/auth-controller.js:92:19)
+ [LOGGER] 2024-06-06 10:19:24.675 PM ERROR : Error in setActivateUser function: User not found
+ [LOGGER] 2024-06-06 10:19:24.677 PM ERROR : Error: User not found
+    at setActivateUser (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/auth-controller.js:92:19)
+ [LOGGER] 2024-06-06 11:03:55.326 PM ERROR : Error in get product function: Product not found
+ [LOGGER] 2024-06-06 11:03:55.332 PM ERROR : Error: Product not found
+    at getProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:62:34)
+ [LOGGER] 2024-06-06 11:04:46.161 PM ERROR : Error in update product function: Product not found
+ [LOGGER] 2024-06-06 11:04:46.162 PM ERROR : Error: Product not found
+    at updateProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:89:34)
+ [LOGGER] 2024-06-06 11:47:39.969 PM ERROR : Error in report function: prisma is not defined
+ [LOGGER] 2024-06-06 11:47:39.971 PM ERROR : ReferenceError: prisma is not defined
+    at report (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/report-controller.js:26:24)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at authentication (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/middleware/auth-middleware.js:15:5)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\layer.js:95:5)
+    at D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:284:15
+    at param (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:365:14)

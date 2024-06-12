@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Register.css';
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center vh-100">
+    <div className="coba d-flex align-items-center justify-content-center mt-5">
       <div className="card p-4 shadow-sm" style={{ maxWidth: '400px', width: '100%' }}>
-        <h2 className="mb-4 text-center">Sign Up</h2>
+        <h2 className="mb-4 text-center">Register</h2>
         <form>
           <div className="mb-3">
             <label htmlFor="first_name" className="form-label">First Name</label>
@@ -26,14 +27,14 @@ const Login = () => {
           <button type="submit" className="btn btn-primary w-100">Sign Up</button>
         </form>
         <div className="mt-3 text-center">
-          <p>Already registered ?<Link to="/sign-in"> Sign in</Link></p>
+          <p>Already registered ?<Link to="/login"> Login</Link></p>
         </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;
 
 // import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';

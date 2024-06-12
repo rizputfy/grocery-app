@@ -1,0 +1,347 @@
+ [LOGGER] 2024-06-03 11:36:02.510 PM ERROR : Error in login function: User not active
+ [LOGGER] 2024-06-03 11:36:02.512 PM ERROR : Error: User not active
+    at login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:134:41)
+ [LOGGER] 2024-06-03 11:37:11.157 PM ERROR : Error in login function: Email or Password Wrong
+ [LOGGER] 2024-06-03 11:37:11.158 PM ERROR : Error: Email or Password Wrong
+    at login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:136:37)
+ [LOGGER] 2024-06-03 11:38:21.191 PM ERROR : Error in create product function: Product already exist
+ [LOGGER] 2024-06-03 11:38:21.194 PM ERROR : Error: Product already exist
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:16:33)
+ [LOGGER] 2024-06-03 11:40:06.310 PM ERROR : Error create order function in: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "5e67e686-e79a-414b-bd44-fa1e05a7ef62",
+    userId: "c3f25faf-629f-45a1-a7f8-1c081a2f41fa",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusOrder: "PENDING",
+    shippingStatus: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "807263ba-2813-490c-8ab8-e85e00ddaea8",
++   statusShipping: statusShipping
+  }
+}
+
+Argument `statusShipping` is missing.
+ [LOGGER] 2024-06-03 11:40:06.317 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "5e67e686-e79a-414b-bd44-fa1e05a7ef62",
+    userId: "c3f25faf-629f-45a1-a7f8-1c081a2f41fa",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusOrder: "PENDING",
+    shippingStatus: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "807263ba-2813-490c-8ab8-e85e00ddaea8",
++   statusShipping: statusShipping
+  }
+}
+
+Argument `statusShipping` is missing.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:52:9)
+ [LOGGER] 2024-06-03 11:41:46.668 PM ERROR : Error create order function in: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "4f867896-554b-4389-9340-665c474cae9f",
+    userId: "c3f25faf-629f-45a1-a7f8-1c081a2f41fa",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusOrder: "PENDING",
+    statusShipping: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "d1067e8c-1a52-4066-b9ee-bff1c1279736",
++   responseMidtrans: String
+  }
+}
+
+Argument `responseMidtrans` is missing.
+ [LOGGER] 2024-06-03 11:41:46.671 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "4f867896-554b-4389-9340-665c474cae9f",
+    userId: "c3f25faf-629f-45a1-a7f8-1c081a2f41fa",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusOrder: "PENDING",
+    statusShipping: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "d1067e8c-1a52-4066-b9ee-bff1c1279736",
++   responseMidtrans: String
+  }
+}
+
+Argument `responseMidtrans` is missing.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:52:9)
+ [LOGGER] 2024-06-03 11:44:38.643 PM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    menuId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "f3466385-3727-4f49-b035-7f0e2a8d2264"
+  },
+  1: {
+    menuId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "f3466385-3727-4f49-b035-7f0e2a8d2264"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+ [LOGGER] 2024-06-03 11:44:38.650 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    menuId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "f3466385-3727-4f49-b035-7f0e2a8d2264"
+  },
+  1: {
+    menuId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "f3466385-3727-4f49-b035-7f0e2a8d2264"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:74:9)
+ [LOGGER] 2024-06-03 11:48:08.557 PM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    menuId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "566db9f5-a3b7-454f-877c-45472d8b3823"
+  },
+  1: {
+    menuId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "566db9f5-a3b7-454f-877c-45472d8b3823"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+ [LOGGER] 2024-06-03 11:48:08.564 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    menuId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "566db9f5-a3b7-454f-877c-45472d8b3823"
+  },
+  1: {
+    menuId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "566db9f5-a3b7-454f-877c-45472d8b3823"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:75:9)
+ [LOGGER] 2024-06-03 11:49:22.295 PM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "67fc46db-2d63-4b0d-9120-72fde37125fc"
+  },
+  1: {
+    productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "67fc46db-2d63-4b0d-9120-72fde37125fc"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+ [LOGGER] 2024-06-03 11:49:22.300 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "67fc46db-2d63-4b0d-9120-72fde37125fc"
+  },
+  1: {
+    productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "67fc46db-2d63-4b0d-9120-72fde37125fc"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:75:9)
+ [LOGGER] 2024-06-03 11:50:08.755 PM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "67c93900-0f05-476f-a087-561fdd0b5d45"
+  },
+  1: {
+    productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "67c93900-0f05-476f-a087-561fdd0b5d45"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+ [LOGGER] 2024-06-03 11:50:08.765 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  0: {
+  ~
+    productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+    quantity: 2,
+    subtotal: 20000,
+    orderId: "67c93900-0f05-476f-a087-561fdd0b5d45"
+  },
+  1: {
+    productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+    quantity: 1,
+    subtotal: 20000,
+    orderId: "67c93900-0f05-476f-a087-561fdd0b5d45"
+  },
+? data?: OrderItemCreateManyInput | OrderItemCreateManyInput[],
+? skipDuplicates?: Boolean
+}
+
+Unknown argument `0`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:75:9)
+ [LOGGER] 2024-06-03 11:52:36.775 PM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  data: {
+    orderItems: [
+      {
+        productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+        quantity: 2,
+        subtotal: 20000,
+        orderId: "bbe6a177-eb7e-4beb-9644-8bcb42dd68f5"
+      },
+      {
+        productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+        quantity: 1,
+        subtotal: 20000,
+        orderId: "bbe6a177-eb7e-4beb-9644-8bcb42dd68f5"
+      }
+    ],
++   productId: String
+  }
+}
+
+Argument `productId` is missing.
+ [LOGGER] 2024-06-03 11:52:36.781 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+{
+  data: {
+    orderItems: [
+      {
+        productId: "09df00ab-f79d-4e49-8c28-7320c56f50df",
+        quantity: 2,
+        subtotal: 20000,
+        orderId: "bbe6a177-eb7e-4beb-9644-8bcb42dd68f5"
+      },
+      {
+        productId: "0cbdc90b-fd53-40cc-ace7-5d636076f7cc",
+        quantity: 1,
+        subtotal: 20000,
+        orderId: "bbe6a177-eb7e-4beb-9644-8bcb42dd68f5"
+      }
+    ],
++   productId: String
+  }
+}
+
+Argument `productId` is missing.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:76:9)

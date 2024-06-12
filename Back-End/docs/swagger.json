@@ -1,0 +1,2066 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Grocery Delivery APP - RESTful API Documentation",
+        "version": "1.0.0",
+        "description": "Halaman ini untuk mendokumentasi RESTful API dari aplikasi Grocery Delivery APP"
+    },
+    "tags": [
+        {
+            "name": "Auth",
+            "description": "API ini untuk mengelola auth resources"
+        },
+        {
+            "name": "Products",
+            "description": "API ini untuk mengelola data product resources"
+        },
+        {
+            "name": "Carts",
+            "description": "API ini untuk mengelola data cart resources"
+        }
+    ],
+    "servers": [
+        {
+            "url": "http://localhost:3000"
+        }
+    ],
+    "paths": {
+        "/api-public/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "REST API untuk login",
+                "description": "API ini digunakan ketika user ingin login",
+                "requestBody": {
+                    "description": "request body ini digunakan ketika user ingin login",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "description": "Email user",
+                                        "example": "abdultalif85@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "description": "Password user",
+                                        "example": "12345678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User logged in successfully: abdultalif85@gmail.com"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "eae3f351-8802-4fd3-8014-600f2113d512"
+                                                },
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": "abdultalif85@gmail.com"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Abdul Talif Parinduri"
+                                                },
+                                                "no_telp": {
+                                                    "type": "string",
+                                                    "example": "081234567890"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "default.png"
+                                                },
+                                                "token": {
+                                                    "type": "string",
+                                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZjM2E2MjMyLTI5M2EtNDhiZS1hYWQ2LTBjMTBjNTQ5NzJiZCIsImVtYWlsIjoiYWJkdWx0YWxpZjg1QGdtYWlsLmNvbSIsImlhdCI6MTcxNTc4MzI0MywiZXhwIjoxNzE1Nzg1MDQzfQ.wRJ2rbyXxULSwgsHdALNROsbGAqEj2CSfWF66K950CQ"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Email or Password Wrong"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "email must be a valid email"
+                                                    ]
+                                                },
+                                                "password": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "password length must be at least 5 characters long"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api-public/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "API untuk register",
+                "description": "API ini digunakan ketika user ingin register",
+                "requestBody": {
+                    "description": "request body untuk user register",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Nama user",
+                                        "example": "Abdul Talif"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "description": "Email user",
+                                        "example": "abdultalif85@gmail.com"
+                                    },
+                                    "no_telp": {
+                                        "type": "string",
+                                        "description": "Nomor Handphone user",
+                                        "example": "081234567890"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "description": "Password user",
+                                        "example": "12345678"
+                                    },
+                                    "confirmPassword": {
+                                        "type": "string",
+                                        "description": "Confirm Password user",
+                                        "example": "12345678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User created, please check your email"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "eae3f351-8802-4fd3-8014-600f2113d512"
+                                                },
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": "abdultalif85@gmail.com"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Abdul Talif Parinduri"
+                                                },
+                                                "no_telp": {
+                                                    "type": "string",
+                                                    "example": "081234567890"
+                                                },
+                                                "role": {
+                                                    "type": "string",
+                                                    "example": "User"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "default.png"
+                                                },
+                                                "isActive": {
+                                                    "type": "boolean",
+                                                    "example": false
+                                                },
+                                                "expireTime": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-15T15:32:07.000Z"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "email must be a valid email"
+                                                    ]
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "name is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "no_telp": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "no_telp length must be at least 10 characters long"
+                                                    ]
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "image is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "password": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "password length must be at least 5 characters long"
+                                                    ]
+                                                },
+                                                "confirmPassword": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "confirmPassword must be [ref:password]"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Tidak dapat diproses",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Email has been registered and please check your email"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "Coflict",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Email has been registered and is active"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api-public/set-activate/{email}/{userId}": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "API untuk activated user",
+                "description": "API ini digunakan ketika user ingin meng-aktifkan akun",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Id User",
+                            "example": "eae3f351-8802-4fd3-8014-600f2113d512"
+                        },
+                        "description": "Id User"
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Email",
+                            "example": "abdultalif85@gmail.com"
+                        },
+                        "description": "Email"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User abdultalif75@gmail.com Activated"
+                                        },
+                                        "data": {
+                                            "type": null,
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "User Not Found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api-public/forgot-password": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "API untuk lupa password",
+                "description": "API ini digunakan ketika user lupa password",
+                "requestBody": {
+                    "description": "request body untuk user memverifikasi email",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "description": "Email user",
+                                        "example": "abdultalif85@gmail.com"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Please check your email: abdultalif85@gmail.com"
+                                        },
+                                        "data": {
+                                            "type": null,
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "email must be a valid email"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "email not found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api-public/valid-token/{token}": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "API untuk cek token reset password yang di kirim lewat email",
+                "description": "API ini digunakan ketika user ingin mendapatkan email setelah mengisi form forgot password",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Token reset password",
+                            "example": "d043cfaa-e521-42f4-8d53-96ba8b0eb7ed"
+                        },
+                        "description": "Token reset password"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Token forgot password Valid"
+                                        },
+                                        "data": {
+                                            "type": null,
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Expired Token Reset Password"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Invalid Token Reset Password"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api-public/reset-password/{token}": {
+            "patch": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "API untuk mereset password",
+                "description": "API ini digunakan untuk user mereset password",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Token reset password",
+                            "example": "d043cfaa-e521-42f4-8d53-96ba8b0eb7ed"
+                        },
+                        "description": "Token reset password"
+                    }
+                ],
+                "requestBody": {
+                    "description": "request body untuk user mereset password",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "newPassword": {
+                                        "type": "string",
+                                        "description": "Password user",
+                                        "example": "password"
+                                    },
+                                    "confirmPassword": {
+                                        "type": "string",
+                                        "description": "Confirm password user",
+                                        "example": "password"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Thank you for resetting your password!"
+                                        },
+                                        "data": {
+                                            "type": null,
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "newPassword": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "newPassword length must be at least 5 characters long"
+                                                    ]
+                                                },
+                                                "confirmPassword": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "confirmPassword must be [ref:newPassword]"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Token invalid or token expired"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/products/category/{category}": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk menampilkan data product berdasarkan category product",
+                "description": "API untuk menampilkan data product berdasarkan category product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "category",
+                            "example": "New Menu"
+                        },
+                        "description": "category"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Get products by category successfully"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Kopi Liong Bulan"
+                                                },
+                                                "stok": {
+                                                    "type": "number",
+                                                    "example": 2
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": "New Menu"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "1716821811433.png"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Product Not Found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/products": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk menambahkan data product",
+                "description": "API ini digunakan untuk menambahkan data product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Kopi Liong Bulan",
+                                        "description": "Nama Produk yang ingin dijual"
+                                    },
+                                    "stok": {
+                                        "type": "integer",
+                                        "example": 2,
+                                        "description": "Stok produk yang ingin dijual"
+                                    },
+                                    "price": {
+                                        "type": "integer",
+                                        "example": 20000,
+                                        "description": "Harga produk yang ingin dijual"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus.",
+                                        "description": "Deskripsi produk yang ingin dijual"
+                                    },
+                                    "category": {
+                                        "type": "string",
+                                        "example": "Minuman",
+                                        "description": "Kategori produk yang ingin dijual"
+                                    },
+                                    "image": {
+                                        "type": "file",
+                                        "example": "kopi.jpg",
+                                        "description": "Gambar produk yang ingin dijual"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Create product Kopi Liong Bulan successfuly"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Kopi Liong Bulan"
+                                                },
+                                                "stok": {
+                                                    "type": "number",
+                                                    "example": 2
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": "Minuman"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "1716821811433.png"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "name is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "stok": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "stok is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "price": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "price is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "image is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "category is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "description is not allowed to be empty"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk menampilkan data product",
+                "description": "API ini digunakan untuk menampilkan data product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Get products successfully"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Kopi Liong Bulan"
+                                                },
+                                                "stok": {
+                                                    "type": "number",
+                                                    "example": 2
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": "Minuman"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "1716821811433.png"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/products/{productId}": {
+            "put": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk mengubah data product",
+                "description": "API ini digunakan untuk mengubah data product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "productId",
+                            "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                        },
+                        "description": "Id Product"
+                    }
+                ],
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Kopi Liong Bulan",
+                                        "description": "Nama Produk yang ingin dijual"
+                                    },
+                                    "stok": {
+                                        "type": "integer",
+                                        "example": 2,
+                                        "description": "Stok produk yang ingin dijual"
+                                    },
+                                    "price": {
+                                        "type": "integer",
+                                        "example": 20000,
+                                        "description": "Harga produk yang ingin dijual"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus.",
+                                        "description": "Deskripsi produk yang ingin dijual"
+                                    },
+                                    "category": {
+                                        "type": "string",
+                                        "example": "Minuman",
+                                        "description": "Kategori produk yang ingin dijual"
+                                    },
+                                    "image": {
+                                        "type": "file",
+                                        "example": "kopi.jpg",
+                                        "description": "Gambar produk yang ingin dijual"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Update product Kopi Liong Bulan successfuly"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Kopi Liong Bulan"
+                                                },
+                                                "stok": {
+                                                    "type": "number",
+                                                    "example": 2
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": "Minuman"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "1716821811433.png"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "name is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "stok": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "stok is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "price": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "price is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "image is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "category is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "description is not allowed to be empty"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Product Not Found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk menampilkan data product berdasarkan id product",
+                "description": "API untuk menampilkan data product berdasarkan id product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "productId",
+                            "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                        },
+                        "description": "Id Product"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Get product successfully"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Kopi Liong Bulan"
+                                                },
+                                                "stok": {
+                                                    "type": "number",
+                                                    "example": 2
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                },
+                                                "category": {
+                                                    "type": "string",
+                                                    "example": "Minuman"
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "1716821811433.png"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Product Not Found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "API untuk menghapus data product",
+                "description": "API ini digunakan untuk menghapus data product",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "productId",
+                            "example": "e891442c-0353-4d39-bb6c-246d81091365"
+                        },
+                        "description": "Id Product"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Delete product successfuly"
+                                        },
+                                        "data": {
+                                            "type": null,
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Product Not Found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/carts": {
+            "get": {
+                "tags": [
+                    "Carts"
+                ],
+                "summary": "REST API untuk menampilkan data cart",
+                "description": "API ini digunakan ketika user melihat data cart",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Get Carts Successfuly"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                                                },
+                                                "quantity": {
+                                                    "type": "number",
+                                                    "example": 5
+                                                },
+                                                "total": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "Product": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Kopi Liong Bulan"
+                                                        },
+                                                        "price": {
+                                                            "type": "number",
+                                                            "example": 20000
+                                                        },
+                                                        "stok": {
+                                                            "type": "number",
+                                                            "example": 7
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "246756453535676.png"
+                                                        },
+                                                        "category": {
+                                                            "type": "string",
+                                                            "example": "Kopi"
+                                                        },
+                                                        "description": {
+                                                            "type": "string",
+                                                            "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                        }
+                                                    }
+                                                },
+                                                "user": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "914c4f1c-1285-4fef-b8a7-68e8107df0b1"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Abdul Talif Parinduri"
+                                                        },
+                                                        "email": {
+                                                            "type": "string",
+                                                            "example": "abdultalif85@gmail.com"
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "default.jpg"
+                                                        },
+                                                        "no_telp": {
+                                                            "type": "string",
+                                                            "example": "089512345678"
+                                                        }
+                                                    }
+                                                },
+                                                "createdAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:23.759Z"
+                                                },
+                                                "updatedAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:48.574Z"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Carts"
+                ],
+                "summary": "REST API untuk menambah data cart",
+                "description": "API ini digunakan ketika user menambah data cart",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "requestBody": {
+                    "description": "request body ini digunakan ketika ingin menambah data cart",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "productId": {
+                                        "type": "string",
+                                        "description": "productId",
+                                        "example": "3695bb82-607e-4492-8b1c-49d5f472b3ab"
+                                    },
+                                    "quantity": {
+                                        "type": "number",
+                                        "description": "quantity Product",
+                                        "example": 5
+                                    },
+                                    "total": {
+                                        "type": "number",
+                                        "description": "total harga Product",
+                                        "example": 20000
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Created Cart successfuly"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                                                },
+                                                "quantity": {
+                                                    "type": "number",
+                                                    "example": 5
+                                                },
+                                                "total": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "Product": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "3695bb82-607e-4492-8b1c-49d5f472b3ab"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Kopi Liong Bulan"
+                                                        },
+                                                        "price": {
+                                                            "type": "number",
+                                                            "example": 20000
+                                                        },
+                                                        "stok": {
+                                                            "type": "number",
+                                                            "example": 7
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "246756453535676.png"
+                                                        },
+                                                        "category": {
+                                                            "type": "string",
+                                                            "example": "Kopi"
+                                                        },
+                                                        "description": {
+                                                            "type": "string",
+                                                            "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                        }
+                                                    }
+                                                },
+                                                "user": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "914c4f1c-1285-4fef-b8a7-68e8107df0b1"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Abdul Talif Parinduri"
+                                                        },
+                                                        "email": {
+                                                            "type": "string",
+                                                            "example": "abdultalif85@gmail.com"
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "default.jpg"
+                                                        },
+                                                        "no_telp": {
+                                                            "type": "string",
+                                                            "example": "089512345678"
+                                                        }
+                                                    }
+                                                },
+                                                "createdAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:23.759Z"
+                                                },
+                                                "updatedAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:48.574Z"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "productId": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "productId is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "quantity": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "quantity is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "total": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "total is not allowed to be empty"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/carts/{cartId}": {
+            "put": {
+                "tags": [
+                    "Carts"
+                ],
+                "summary": "REST API untuk mengubah data cart",
+                "description": "API ini digunakan ketika user mengubah data cart",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "cartId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Id Cart",
+                            "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                        },
+                        "description": "Id Cart"
+                    }
+                ],
+                "requestBody": {
+                    "description": "request body ini digunakan ketika ingin mengubah data cart",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "quantity": {
+                                        "type": "number",
+                                        "description": "quantity Product",
+                                        "example": 5
+                                    },
+                                    "total": {
+                                        "type": "number",
+                                        "description": "total harga Product",
+                                        "example": 20000
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "update cart successfuly"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                                                },
+                                                "quantity": {
+                                                    "type": "number",
+                                                    "example": 5
+                                                },
+                                                "total": {
+                                                    "type": "number",
+                                                    "example": 20000
+                                                },
+                                                "Product": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "3695bb82-607e-4492-8b1c-49d5f472b3ab"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Kopi Liong Bulan"
+                                                        },
+                                                        "price": {
+                                                            "type": "number",
+                                                            "example": 20000
+                                                        },
+                                                        "stok": {
+                                                            "type": "number",
+                                                            "example": 7
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "246756453535676.png"
+                                                        },
+                                                        "category": {
+                                                            "type": "string",
+                                                            "example": "Kopi"
+                                                        },
+                                                        "description": {
+                                                            "type": "string",
+                                                            "example": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum et sequi iste itaque voluptatum voluptatibus accusamus."
+                                                        }
+                                                    }
+                                                },
+                                                "user": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "914c4f1c-1285-4fef-b8a7-68e8107df0b1"
+                                                        },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "Abdul Talif Parinduri"
+                                                        },
+                                                        "email": {
+                                                            "type": "string",
+                                                            "example": "abdultalif85@gmail.com"
+                                                        },
+                                                        "image": {
+                                                            "type": "string",
+                                                            "example": "default.jpg"
+                                                        },
+                                                        "no_telp": {
+                                                            "type": "string",
+                                                            "example": "089512345678"
+                                                        }
+                                                    }
+                                                },
+                                                "createdAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:23.759Z"
+                                                },
+                                                "updatedAt": {
+                                                    "type": "datetime",
+                                                    "example": "2024-05-25T10:14:48.574Z"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "productId": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "productId is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "quantity": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "quantity is not allowed to be empty"
+                                                    ]
+                                                },
+                                                "total": {
+                                                    "type": "string",
+                                                    "example": [
+                                                        "total is not allowed to be empty"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Cart not found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Carts"
+                ],
+                "summary": "REST API untuk menghapus data cart",
+                "description": "API ini digunakan ketika user menghapus data cart",
+                "security": [
+                    {
+                        "bearerToken": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "cartId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Id Cart",
+                            "example": "9ed5b024-aa90-4160-acf8-0feea4a3dc90"
+                        },
+                        "description": "Id Cart"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Delete cart successfuly"
+                                        },
+                                        "data": {
+                                            "type": "null",
+                                            "example": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Unauthorized"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object",
+                                            "example": "Cart not found"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerToken": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

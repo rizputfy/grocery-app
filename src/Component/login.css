@@ -9,6 +9,9 @@
     width: 100vw;
 }
 
+
+  
+
 .login{
     text-align: center;
     background-color: white;
@@ -121,4 +124,12 @@
 .login-status{
     font-family: 'Montserrat', sans-serif;
     font-size: small;
+}
+
+.btn-primary {
+    background-color: yellow !important;
+}
+
+.btn-primary:hover {
+    background-color: lime !important;
 }

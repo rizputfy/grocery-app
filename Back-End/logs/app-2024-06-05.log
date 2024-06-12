@@ -1,0 +1,556 @@
+ [LOGGER] 2024-06-05 10:43:59.273 AM ERROR : Error in login function: Email or Password Wrong
+ [LOGGER] 2024-06-05 10:43:59.275 AM ERROR : Error: Email or Password Wrong
+    at login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:133:32)
+ [LOGGER] 2024-06-05 10:44:04.265 AM ERROR : Error in login function: Email or Password Wrong
+ [LOGGER] 2024-06-05 10:44:04.266 AM ERROR : Error: Email or Password Wrong
+    at login (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/user-controller.js:133:32)
+ [LOGGER] 2024-06-05 10:45:52.171 AM ERROR : Error create order function in: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "1563f85a-ec19-4a43-8d67-b011705b3ed9",
+    userId: "5c64f6a1-968e-43c0-b18b-f6cbaa2239f2",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusShipping: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "04a94fc0-0bde-4930-a5da-a3fc82555547",
+    responseMidtrans: "{\"token\":\"04a94fc0-0bde-4930-a5da-a3fc82555547\",\"redirect_url\":\"https://app.sandbox.midtrans.com/snap/v4/redirection/04a94fc0-0bde-4930-a5da-a3fc82555547\"}",
++   statusOrder: statusOrder
+  }
+}
+
+Argument `statusOrder` is missing.
+ [LOGGER] 2024-06-05 10:45:52.174 AM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    id: "1563f85a-ec19-4a43-8d67-b011705b3ed9",
+    userId: "5c64f6a1-968e-43c0-b18b-f6cbaa2239f2",
+    totalPrice: 40000,
+    shippingPrice: 5000,
+    statusShipping: "PROCESSING",
+    address: "Jl. Contoh Alamat No. 123",
+    tokenMidtrans: "04a94fc0-0bde-4930-a5da-a3fc82555547",
+    responseMidtrans: "{\"token\":\"04a94fc0-0bde-4930-a5da-a3fc82555547\",\"redirect_url\":\"https://app.sandbox.midtrans.com/snap/v4/redirection/04a94fc0-0bde-4930-a5da-a3fc82555547\"}",
++   statusOrder: statusOrder
+  }
+}
+
+Argument `statusOrder` is missing.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:52:9)
+ [LOGGER] 2024-06-05 10:51:00.806 AM ERROR : Error create order function in: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+
+Foreign key constraint failed on the field: `productId`
+ [LOGGER] 2024-06-05 10:51:00.809 AM ERROR : PrismaClientKnownRequestError: 
+Invalid `prisma.orderItem.createMany()` invocation:
+
+
+Foreign key constraint failed on the field: `productId`
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6877)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async createOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:85:9)
+ [LOGGER] 2024-06-05 10:52:25.060 AM ERROR : Error in create product function: Product already exist
+ [LOGGER] 2024-06-05 10:52:25.065 AM ERROR : Error: Product already exist
+    at createProduct (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/products-controller.js:16:33)
+ [LOGGER] 2024-06-05 12:43:18.435 PM ERROR : uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:216:15)
+    at proto.<computed> [as get] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:521:19)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/router/api.js:39:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-06-05 12:43:27.337 PM ERROR : uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:216:15)
+    at proto.<computed> [as get] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:521:19)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/router/api.js:39:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-06-05 12:52:41.639 PM ERROR : Error in get orders function : Cannot read properties of null (reading 'length')
+ [LOGGER] 2024-06-05 12:52:41.642 PM ERROR : TypeError: Cannot read properties of null (reading 'length')
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:257:19)
+ [LOGGER] 2024-06-05 12:53:10.528 PM ERROR : Error in get orders function : Orders not found
+ [LOGGER] 2024-06-05 12:53:10.530 PM ERROR : Error: Orders not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:257:27)
+ [LOGGER] 2024-06-05 12:53:17.107 PM ERROR : Error in get orders function : Orders not found
+ [LOGGER] 2024-06-05 12:53:17.112 PM ERROR : Error: Orders not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:257:27)
+ [LOGGER] 2024-06-05 01:33:07.756 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:33:07.759 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:33:15.891 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:33:15.892 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:36:24.947 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:36:24.949 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:38:04.257 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:38:04.258 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:39:51.633 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:39:51.635 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:40:40.502 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:40:40.504 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:41:33.237 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:41:33.238 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:41:42.058 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:41:42.060 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:41:43.585 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:41:43.586 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:42:22.474 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:42:22.475 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:44:16.842 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:44:16.844 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:46:05.528 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:46:05.530 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:47:48.121 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+ [LOGGER] 2024-06-05 01:47:48.126 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:48:02.884 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+ [LOGGER] 2024-06-05 01:48:02.888 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:48:29.940 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+ [LOGGER] 2024-06-05 01:48:29.944 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      contains: "success",
+      ~~~~~~~~
+?     equals?: statusOrder | EnumstatusOrderFieldRefInput,
+?     in?: statusOrder[],
+?     notIn?: statusOrder[],
+?     not?: statusOrder | NestedEnumstatusOrderFilter
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Unknown argument `contains`. Available options are marked with ?.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:53:50.796 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCCES"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+ [LOGGER] 2024-06-05 01:53:50.801 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCCES"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:55:37.146 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "succes"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+ [LOGGER] 2024-06-05 01:55:37.152 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "succes"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:55:41.249 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCESS"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+ [LOGGER] 2024-06-05 01:55:41.252 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCESS"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 01:55:59.489 PM ERROR : Error in get order function : Order not found
+ [LOGGER] 2024-06-05 01:55:59.490 PM ERROR : Error: Order not found
+    at getOrder (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:263:27)
+ [LOGGER] 2024-06-05 01:58:07.250 PM ERROR : Error in filter order by status  function : 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCESS"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+ [LOGGER] 2024-06-05 01:58:07.257 PM ERROR : PrismaClientValidationError: 
+Invalid `prisma.order.findMany()` invocation:
+
+{
+  where: {
+    statusOrder: {
+      equals: "SUCESS"
+              ~~~~~~~~
+    }
+  },
+  orderBy: {
+    updatedAt: "desc"
+  },
+  include: {
+    user: true,
+    OrderItem: {
+      include: {
+        product: true
+      }
+    },
+    Tracking: true
+  }
+}
+
+Invalid value for argument `equals`. Expected statusOrder.
+    at Tn (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:115:6855)
+    at In.handleRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6533)
+    at In.handleAndLogRequestError (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:6211)
+    at In.request (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:122:5919)
+    at async l (D:\belajar\gamelab\Grocery Delivery APP\node_modules\@prisma\client\runtime\library.js:127:11167)
+    at async filterOrdersByStatus (file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/order-controller.js:280:24)
+ [LOGGER] 2024-06-05 02:08:54.434 PM ERROR : uncaughtException: ongkirController is not defined
+ReferenceError: ongkirController is not defined
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/router/api.js:54:29
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-06-05 02:32:13.561 PM ERROR : uncaughtException: ongkir is not defined
+ReferenceError: ongkir is not defined
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/controller/ongkir-controller.js:54:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+ [LOGGER] 2024-06-05 02:32:17.807 PM ERROR : uncaughtException: Route.post() requires a callback function but got a [object Undefined]
+Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\route.js:216:15)
+    at proto.<computed> [as post] (D:\belajar\gamelab\Grocery Delivery APP\node_modules\express\lib\router\index.js:521:19)
+    at file:///D:/belajar/gamelab/Grocery%20Delivery%20APP/src/router/api.js:57:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)

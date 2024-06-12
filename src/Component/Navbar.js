@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   NavbarContainer,
   Logo, NavMenu, NavItem, NavLink, DropdownMenu, DropdownColumn, DropdownCategory, DropdownItem, NavIcons, NavIcon,
@@ -133,7 +134,7 @@ const Navbar = () => {
         </SearchContainer>
         <NavIcon href="#"><i className="fas fa-user"></i></NavIcon>
         <NavIcon href="#"><i className="fas fa-heart"></i></NavIcon>
-        <LoginButton href="#">Login</LoginButton>
+        <LoginButton as={Link} to="/login">Login</LoginButton>
       </NavIcons>
     </NavbarContainer>
     </>
